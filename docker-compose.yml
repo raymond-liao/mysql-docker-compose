@@ -1,10 +1,9 @@
 mysql:
   image: mysql
-  restart: always
   container_name: mysql
   environment:
-    MYSQL_DATABASE: 'db'
-    MYSQL_USER: 'raniys'
+    MYSQL_DATABASE: 'mysql'
+    MYSQL_USER: 'root'
     MYSQL_PASSWORD: '12345678'
     MYSQL_ROOT_PASSWORD: '12345678'
   ports:
@@ -12,4 +11,4 @@ mysql:
   volumes:
     - ./data/conf.d:/etc/mysql/conf.d
     - ./data/logs:/logs
-    - ./data/db:/var/lib/mysql
+    - /usr/local/var/mysql:/var/lib/mysql
