@@ -14,6 +14,7 @@ A [docker-compose](https://docs.docker.com/compose/) sample to start `MySQL` dat
 
   ```shell
     $ cd ./mysql-docker-compose
+    // Please add path "/usr/local/var/mysql" as the sharing folder for your Docker before
     $ docker-compose up -d
   ```
 
