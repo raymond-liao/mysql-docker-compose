@@ -1,10 +1,11 @@
 mysql:
-  image: mysql
+  image: mysql:5.7
   container_name: mysql
   environment:
     MYSQL_DATABASE: 'mysql'
-    MYSQL_USER: 'root'
-    MYSQL_PASSWORD: '12345678'
+#    We cannot set user as 'root' if mysql is below version of 5.x: https://github.com/docker-library/mysql/issues/129
+#    MYSQL_USER: 'root'
+#    MYSQL_PASSWORD: '12345678'
     MYSQL_ROOT_PASSWORD: '12345678'
   ports:
     - "3306:3306"
